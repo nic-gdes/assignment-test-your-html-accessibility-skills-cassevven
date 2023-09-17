@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>HTML accessibility: Task 1</title>
+    <style>
+      body {
+        background-color: rgb(249, 234, 234);
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 50px 125px;
+        margin: 0;
+        line-height: 30px;
+        font-size: 18px;
+        height: 100%;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+      }
+
+
+      .button {
+        background-color: rgb(173, 173, 226);
+        border-radius: 10px;
+        width: 170px;
+        padding: 20px;
+        text-align: center;
+        font-weight: 600;
+      }
+      
+      a {
+         color: rgb(0, 117, 195);
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      a:hover {
+        color: #f853ab;}
+
+
+      h4 {
+        font-size: 18px;
+        padding-right: 40px;
+        
+      }
+
+      .form {
+        display: flex;
+        flex-direction: row;
+      
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 100px;
+        align-items: center;
+      }
+
+      main img {
+        display: block;
+        width: 250px;
+        margin: 20px auto;
+        box-shadow: 5px 5px 0 black;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .links {
+        display: flex;
+        gap: 40px;
+        font-weight: 600;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+        
+      }
+
+      .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+      
+      }
+      
+
+    
+    </style>
+  </head>
+  <body>
+    <main>
+        <div class="top">
+        <p>For more information about our activities, 
+        check out the links below:</p>
+          <div class="links">
+          <a href="/fundraising" target="_blank">Fundraising</a>
+          <a href="/education" target="_blank">Education</a>
+          <a href="/resources/sponsorship.pdf" target="_blank">Sponsorships</a>
+          <a href="/resources/assessments.docx" target="_blank">Assessment Sheets</a>
+          </div>
+        
+
+    <h1>Need help?</h1>
+    <p>If you have any problems with our products, our  support center can offer you all the help you need, whether you want:</p>
+    <ul>
+      <li>Advice choosing a new product</li>
+      <li>Tech support on an existing product</li>
+      <li>Refund and cancellation assistance</li>
+    </ul>
+  
+    <h2>Contact us now</h2>
+    <p>Our help center contains live chat, e-mail addresses, and phone numbers.</p>
+    <button class="button"><a href="">Find Contact Details Here</a></button>
+
+    <h3>Find out answers</h3>
+    <p>Forums section contains a large knowledge base of searchable previously asked questions, and you can always ask a new question if you can't find the answer you're looking for.</p>
+    <button class="button"><a href="">Find Forums</a></button></div>
+</main>
+
+    <container class="column"> 
+      <div class="form"><h4>Name:</h4>
+        <input type="text" name="name" size="50"></div>
+        <div class="form"><h4>Email:</h4>
+        <input type="email" name="email" size="50"></div>
+        <div class="form"><h4>Age:</h4>
+          <input type="number" name="age"></div>
+    </container>
+
+    <header>
+      <img src="./images/star.png" alt="A small black and white pixelated star icon at the top of the site">
+      <h1>Groovy Images</h1>
+    </header>
+    <main>
+      <img src="./images/teapot.jpg" alt="A black tea kettle sitting on a window sill in the daytime">
+      <img src="./images/football.jpg" alt="A white and black soccer ball sitting in the grass">
+    </main>
+  
+  </body>
+
+</html>
