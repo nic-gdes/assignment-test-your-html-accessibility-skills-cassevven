@@ -110,9 +110,12 @@
           <div class="links">
           <a href="/fundraising" target="_blank">Fundraising</a>
           <a href="/education" target="_blank">Education</a>
-          <a href="/resources/sponsorship.pdf" target="_blank">Sponsorships</a>
-          <a href="/resources/assessments.docx" target="_blank">Assessment Sheets</a>
+          <a href="/resources/sponsorship.pdf" target="_blank">Sponsorships (PDF, 8MB)</a>
+          <a href="/resources/assessments.docx" target="_blank">Assessment Sheets (.docx)</a>
           </div>
+
+          <!-- For links that automatically download files to the user's computer, you want some sort of content showing that it will happen (usually adding something like the filename extension is enough). Also, if the file is big enough that it could take more than a few seconds to download, you want to show the user that as well, so they know how long to expect the download to take. -->
+          <!-- So within the spirit of the assignment, this should have remained a single line of text with inline links. What you did is acceptable since it is indeed accessible, though. Keep in mind that you won't always be able to change the structure of the content that's provided to you, so it'll be important to know how to include accessibility within the parameters of what's given. -->
         
 
     <h1>Need help?</h1>
@@ -125,24 +128,55 @@
   
     <h2>Contact us now</h2>
     <p>Our help center contains live chat, e-mail addresses, and phone numbers.</p>
-    <button class="button"><a href="">Find Contact Details Here</a></button>
+    <a href="" class="button">Find Contact Details Here</a>
+<!--           It's unnecessary to wrap an anchor <a> link inside of a button element. The button element is intended for on-page interaction like submitting forms, opening pop-ups, etc. If you want to link to another page using something that looks like a button, it's best practice to style the link as a button instead. -->
 
     <h3>Find out answers</h3>
     <p>Forums section contains a large knowledge base of searchable previously asked questions, and you can always ask a new question if you can't find the answer you're looking for.</p>
-    <button class="button"><a href="">Find Forums</a></button></div>
+    <a href="" class="button">Find Forums</a>
 </main>
 
-    <container class="column"> 
+    <section class="column"> 
+<!--       Note that there are no <container> elements in HTML -->
       <div class="form"><h4>Name:</h4>
         <input type="text" name="name" size="50"></div>
         <div class="form"><h4>Email:</h4>
         <input type="email" name="email" size="50"></div>
         <div class="form"><h4>Age:</h4>
           <input type="number" name="age"></div>
-    </container>
+    </section>
+
+  <!--
+    So your form unfortunately isn't semantic at all. A couple of notes:
+    • You don't have a <form> element, which is necessary for the form to work (and to semantically tell users that they're working in a form)
+    • You didn't include <label> elements for each of the inputs. The H4 elements you used isn't semantic and doesn't inform a user who is using a screen reader that "this label is for specifically this input", which is necessary.
+    
+    An accessible form would look more like this:
+
+    <form>
+      <fieldset>
+      <legend>Personal data</legend>
+        <ul>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+          </li>
+          <li>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age">
+          </li>
+          <li>
+            <label for="email">Email address</label>
+            <input type="email" name="email" id="email">
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  -->
 
     <header>
-      <img src="./images/star.png" alt="A small black and white pixelated star icon at the top of the site">
+      <img src="./images/star.png" alt="">
+<!--       Since this star.png image is purely decorative, you actually don't want to include an alt tag, since we don't want to bog users down with content about things that aren't important within the context of the page -->
       <h1>Groovy Images</h1>
     </header>
     <main>
